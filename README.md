@@ -9,7 +9,11 @@
    from bs4 import BeautifulSoup
    ```
 2. 电脑访问指定用户的个人主页：
-3. 填入相关参数：
+   以该用户为例：
+   `https://node.kg.qq.com/personal?uid=639f94822424328f3346`
+   
+
+4. 填入相关参数：
    ```
    param = {
     'outCharset': 'utf-8',
