@@ -1,7 +1,6 @@
 import requests
 import re
 from bs4 import BeautifulSoup
-from pwn import *
 
 num = 1
 songlist = []
@@ -96,7 +95,7 @@ def download_music(url, save_path):
         with open(save_path, 'wb') as file:
             for chunk in response.iter_content(chunk_size=128):
                 file.write(chunk)
-        log.success("Download complete!")
+        print("Download complete!")
     else:
         print("Failed to download music.")
 
@@ -123,4 +122,4 @@ for i in range(len(songlist)):
     if music_url:
         download_music(music_url, mypath)
     else:
-        log.warning(f"{songlist[i][1]}.m4a downlown failed!")
+        print(f"{songlist[i][1]}.m4a downlown failed!")
